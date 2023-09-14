@@ -14,7 +14,7 @@ export function App() {
 
         <div className='flex items-center gap-3'>
           <span className='text-sm text-muted-foreground'>
-            Desenvolvido por <span className='text-sm text-orange-300'>Dri</span> no NLW Rocketseat
+            Developed by <span className='text-sm text-orange-300'>Dri</span>, NLW Rocketseat
           </span>
 
           <Separator orientation='vertical' className='h-6' />
@@ -39,7 +39,7 @@ export function App() {
             />
           </div>
 
-          <p className='text-sm text-muted-foreground'>Lembre-se: você pode utilizar a variável <code className='text-orange-400'>{'{transcription}'}</code> no seu prompt para adicionar o conteúdo da transcrição do vídeo selecionado</p>
+          <p className='text-sm text-muted-foreground'>Remember: you can use the <code className='text-orange-400'>{'{transcription}'}</code> variable in your prompt to add the transcript content of the selected video</p>
         </div>
         
         <aside className="w-80 space-y-6">
@@ -49,7 +49,7 @@ export function App() {
               className="border flex rounded-md aspect-video cursor-pointer border-dashed text-sm flex-col gap-2 items-center justify-center text-muted-foreground hover:bg-primary/5"
             >
               <FileVideo className="w-4 h-4" />
-              Selecione um vídeo
+              Select a video
             </label>
 
             <input type="file" id="video" accept="video/mp4" className="sr-only" />
@@ -57,7 +57,7 @@ export function App() {
             <Separator />
 
             <div className="space-y-2">
-              <Label htmlFor="transcription_prompt">Prompt de transcrição</Label>
+              <Label htmlFor="transcription_prompt">Transcription prompt</Label>
               <Textarea
                 id="transcription_prompt"
                 className="h-20 leading-relaxed resize-none"
@@ -66,7 +66,7 @@ export function App() {
             </div>
 
             <Button type="submit" className="w-full">
-              Carregar video
+              Upload video
               <Upload className="w-4 h-4 ml-2" />
             </Button>
           </form>
@@ -81,14 +81,14 @@ export function App() {
                   <SelectValue placeholder="Selecione um prompt..." />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="title">Título do YouTube</SelectItem>
-                  <SelectItem value="description">Descrição do YouTube</SelectItem>
+                  <SelectItem value="title">YouTube Title</SelectItem>
+                  <SelectItem value="description">YouTube Description</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
             <div className="space-y-2">
-              <Label>Modelo</Label>
+              <Label>Model</Label>
               <Select disabled defaultValue="gpt3.5">
                 <SelectTrigger>
                   <SelectValue />
@@ -98,7 +98,7 @@ export function App() {
                 </SelectContent>
               </Select>
               <span className="block text-sm text-muted-foreground italic">
-                Você poderá customizar essa opção em breve
+              You will be able to customize this option soon
               </span>
             </div>
 
@@ -112,14 +112,14 @@ export function App() {
                 step={0.1}
               />
               <span className="block text-sm text-muted-foreground italic leading-relaxed">
-                Valores mais altor tendem a deixar o resultado mais criativo e com possíveis erros.
+                Higher values tend to make the result more creative and with possible errors.
               </span>
             </div>
 
             <Separator />
 
             <Button type="submit" className="w-full">
-              Executar
+              Run
               <Wand2 className="w-4 h-4 ml-2" />
             </Button>
           </form>
