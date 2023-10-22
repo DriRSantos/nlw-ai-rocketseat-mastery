@@ -15,7 +15,7 @@ model Video {
   name          String
   path          String
   transcription String?
-  createAt      DateTime @default(now())
+  createdAt     DateTime @default(now())
 }
 
 model Prompt {
